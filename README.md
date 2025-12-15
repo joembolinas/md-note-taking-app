@@ -1,60 +1,75 @@
-# Markdown Note-Taking App API
+# Markdown Note-Taking App
 
-A systematic, real-world backend for managing, rendering, and checking grammar of Markdown notes. Built with Python and FastAPI.
+![Markdown Note-taking App](https://assets.roadmap.sh/guest/markdown-note-taking-app-tymi3.png)
 
-## 📚 Documentation
-This project follows a rigorous engineering process. Please refer to the `docs/` folder for detailed documentation:
-- **[Roadmap](docs/0_Roadmap.md):** Project phases and status.
-- **[Product Requirements (PRD)](docs/1_PRD.md):** Functional specifications.
-- **[Architecture](docs/2_Architecture.md):** System design and component diagrams.
-- **[API Specification](docs/3_API_Spec.md):** Endpoint details.
+A robust, systematic backend implementation for the [Markdown Note-taking App](https://roadmap.sh/projects/markdown-note-taking-app) challenge from roadmap.sh. Built with **Python** and **FastAPI**.
 
-## 🚀 Getting Started
+## Features
+
+- **Grammar Check**: corrections for spelling and basic grammar using `TextBlob`.
+- **Markdown Rendering**: Secure conversion of Markdown text to HTML.
+- **File Management**: Upload, save, and retrieve note files.
+- **Systematic Design**: Layered architecture with a focus on maintainability.
+
+> [!TIP]
+> This project follows a "Documentation First" engineering process. Detailed design artifacts are available in the `docs/` directory:
+> *   [Roadmap](docs/0_Roadmap.md)
+> *   [Product Requirements (PRD)](docs/1_PRD.md)
+> *   [Architecture](docs/2_Architecture.md)
+
+## Getting Started
 
 ### Prerequisites
-- Python 3.10+
-- Virtualenv (recommended)
+
+- **Python 3.10+**
+- **pip**
 
 ### Installation
-1.  **Clone the repository** (if not already done).
-2.  **Create a virtual environment:**
+
+1.  **Environment Setup**
+
     ```bash
     python -m venv .venv
     # Windows
     .venv\Scripts\activate
-    # Linux/Mac
+    # Linux/macOS
     source .venv/bin/activate
     ```
-3.  **Install dependencies:**
+
+2.  **Dependencies**
+
     ```bash
     pip install -r requirements.txt
     ```
-4.  **Download Grammar Data:**
+
+3.  **Download NLTK Data**
+
+    Required for the grammar checking service.
+
     ```bash
     python -c "import nltk; nltk.download('punkt_tab'); nltk.download('averaged_perceptron_tagger_eng')"
     ```
 
-### Running the App
-Start the server using Uvicorn:
+### Running Local
+
+Start the API server with hot-reload enabled:
+
 ```bash
 uvicorn app.main:app --reload
 ```
-The API will be available at `http://localhost:8000`.
-Access the interactive API docs at `http://localhost:8000/docs`.
 
-### Running Tests
-Execute the test suite using Pytest:
+The application will be served at `http://localhost:8000`.
+Visit the **[Interactive API Documentation](http://localhost:8000/docs)** to explore and test the endpoints.
+
+## Testing
+
+Run the automated test suite to verify all endpoints:
+
 ```bash
-pytest tests
+pytest
 ```
 
-## 🛠 Features
-- **Save Notes:** Upload and store markdown files securely.
-- **Render HTML:** Convert markdown text to clean HTML.
-- **Grammar Check:** Basic grammar/spelling analysis using TextBlob.
-- **Systematic Design:** Layered architecture (API -> Services -> Storage).
+## Resources
 
----
-
-## 🔗 Project Attribution
-This project is an implementation of the [Markdown Note-taking App](https://roadmap.sh/projects/markdown-note-taking-app) project from roadmap.sh.
+- [Roadmap.sh Project Page](https://roadmap.sh/projects/markdown-note-taking-app)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
