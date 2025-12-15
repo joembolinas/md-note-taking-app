@@ -4,3 +4,6 @@ __pycache__/
 .venv/
 storage/*.md
 !storage/.gitkeep
+GEMINI.md
+COPILOT-INSTRUCTIONS.md
+
