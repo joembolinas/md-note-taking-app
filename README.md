@@ -56,3 +56,5 @@ pytest tests
 
 ---
 
+## 🔗 Project Attribution
+This project is an implementation of the [Markdown Note-taking App](https://roadmap.sh/projects/markdown-note-taking-app) project from roadmap.sh.
